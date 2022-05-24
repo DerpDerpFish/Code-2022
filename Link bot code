@@ -1,0 +1,18 @@
+#include <linkbot.h>
+CLinkbotI robot1, robot2, robot3;
+
+robot1.setSpeed(6, 2);
+robot2.setSpeed(6, 2);
+robot3.setSpeed(6, 2);
+
+//start robot
+robot1.driveDistance(13, 2);
+robot1.driveDistance(-3, 2);
+
+//conveyer robot
+robot2.driveDistance(24, 2);
+robot2.driveDistance(-4, 3);
+
+//end robot
+robot3.driveDistance(16, 2);
+
