@@ -1,0 +1,418 @@
+#include <chplot.h>
+string_t Name, Hname, Bird;
+int Jump, numberf, Title, Title2, fish, B, M1, M2, M3, R, E, Cheat;
+fish = randint (0, 100);
+Jump = randint (0, 50);
+
+//Extra credit code
+void FaceBod(){
+CPlot plot;
+
+plot.noStrokeColor();
+plot.fillColor("cyan");
+plot.circle(0, 0, 5);
+plot.fillColor("white");
+plot.circle(2, 1, 1);
+plot.circle(-2, 1, 1);
+plot.fillColor("black");
+plot.circle(1.75, 1, 0.5);
+plot.circle(-1.75, 1, 0.5);
+plot.fillColor("red");
+plot.bezier(-2, -1, -1, -2, 1, -2, 2, -1);
+plot.fillColor("cyan");
+plot.ellipse(0, -9, 10, 12, 0);
+plot.ellipse(-6, -5, 2, 12, 45);
+plot.ellipse(6, -5, 2, 12, 135);
+plot.ellipse(3, -18, 2, 12, 200);
+plot.ellipse(-3, -18, 2, 12, 160);
+
+plot.axisRange(PLOT_AXIS_XY, -24, 48);
+plot.ticsRange(PLOT_AXIS_XY, 2);
+plot.label(PLOT_AXIS_X, "in");
+plot.label(PLOT_AXIS_Y, "in");
+plot.sizeRatio(1);
+plot.plotting();
+}
+
+void Options(){
+    while (Title == 2){
+        printf("There are no options, you can only go back :p\n 1) Go Back\n");
+        scanf ("%i", &Title2);
+        if (Title2 == 1){
+            printf("Fish \n\n1)Start \n2)Options \n3)Road Maps\nPick an Option\n");
+            scanf ("%i", &Title);
+        }
+            if (Title2 != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+            }  
+}
+}
+
+void StoryName(){
+    printf("Fish");
+}
+
+void ReturnToMenu(){
+    printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+        while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+        }
+    }
+
+void TitleOopsie(){
+    while (Title != 1 && Title != 2 && Title != 3){
+    printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &Title);
+            } 
+        }            
+void OptionOopsie(){
+    while (B != 1 && B != 2 && B != 3){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &B);
+    }
+}
+
+void ReturnOopsie(){
+       while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+       }
+   }
+   
+
+void story(){
+//Menu Screen
+StoryName();
+    printf("\n\n1)Start \n2)Options \n3)Road Maps\n\nPick an Option\n");
+    scanf ("%i", &Title);
+    TitleOopsie();
+    
+    Options();
+    
+    // Start
+    if (Title == 1){
+        printf ("Choose a name for the fish\n");
+        scanf ("%s", &Name);
+    printf ("Choose a name for the bird\n");
+        scanf("%s", &Bird);
+    printf ("Choose a name for the owner\n");
+        scanf("%s", &Hname);
+    //Begining
+    }
+ if (Title == 1){    
+    printf("A fish named %s lived alone in a small fish tank. %s is fed three times daily and\n its tank is cleaned weekly by its owner called %s. The temperature was always maintained at a\n cozy 78 degrees and %s was able to spend its days lazing around and relaxing. But despite all\n this %s had an urge, a longing, to see the world. %s knew there was a big wide world outside,\n and %s wants to see it. One day the bird who is also a pet of %s, named %s flies into the room.\n %s and %s stared deep into eachother's eyes, and the two learned of eachother's desire\n for adventure, %s agrees to help by bringing in a clear small bucket of water.\nWhat should %s do?\n1) Maybe don't go out, the world is scary.\n2) Let's jump OUUUUUUUUUUTTTT!!!!!!!!\n3) Attempt to speak to %s.\n", Name, Name, Hname, Name, Name, Name, Name, Hname, Bird, Name, Bird, Bird, Name, Hname);
+    scanf("%i", &B);
+    OptionOopsie();
+    }
+    //Option 1
+    if (B == 1){
+        printf("%s gave the idea a second thought and came to the conclusion that it's crazy\n and not worth the dangers involved after all, %s doesn't truly know what's out there and it\n might not actually be all that great. So %s continued living its life. As months go by %s's\n days are basically the same, until %s added in a group of %i new fish into the tanks. The\n fishes were small with stripes of read and neon blue.\nWhat should %s do?\n1) The fishes look delicious, eat them.\n2) Ignore the fishes\n3) Interact with the fishes.\n", Name, Name, Name, Name, Hname, fish, Name);
+        scanf("%i", &M1);
+    while (M1 != 1 && M1 != 2 && M1 != 3){
+    printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &M1);
+            }  
+        } 
+
+    //End 1
+    if (M1 == 1){
+        printf("%s stared at the small fishes with a look of unger in its eyes. %s dashed\n towards the new inhabitants. %s's mouth was barely big enough to devour the inhabitants but big\n enough is big enough to gobble each of them up. When %s came back, %s could see the look\n of anger in their eyes. %s quickly grabbed a net and %s was scooped up and flushed down\n a toilet.\nEnding 1: Flushed\n", Name, Name, Name, Hname, Name, Hname, Name);
+        FaceBod();
+        // Return to menu screen
+        ReturnToMenu();
+    } 
+
+    //End 2
+    if (M1 == 2){
+        printf("%s decided to ignore them, \"not interested\" %s thought. As the days went by,\n  %s continued to swim alone in the tank keeping its distance from the new inhabitants,\n and in turn the inhabitants kept their distance from %s. Everyday was the same as the last except for the occasional decorative additions done by %s and\n eventually %s got old. As %s laid on the gravel bed of the tank, %s looked back on its\n life, it couldn't remember the details of its life. All the days seemed to blend together. %s\n then wished that it did go on that adventure, or that it at least interacted with its\n tankmates, but now it's too late. %s's consciousness fades.\nEnding 2: Sad and Alone\n", Name, Name, Name, Name, Hname, Name, Name, Name, Name, Name);
+        FaceBod();
+      // Return to menu screen
+       ReturnToMenu();
+        }
+  
+    
+//End 3
+if (M1 == 3){
+    printf("%s was bored of its solitary life and so went over to try and befriend the new\n tankmates added by %s. The new guys were at first cautious of %s due to %s's size but after a bit of\n talking they eased up. %s learned that the new guys were a species of fish called neon tetra.\n %s and the neon tetras spend their days, swimming around the tank, eating together, and messing\n around. The days flew by and all the fishes got ild. As they all laid on the gravel\n they all thought of the time they spent together, and then their consciousness fades\nEnding 3:\n Friends\n", Name, Hname, Name, Name, Name, Name);
+    FaceBod();
+    // Return to menu screen
+       ReturnToMenu();
+    }
+
+   //Option 2
+    if (B == 2){
+        printf ("%s curled its body and leaped out of the tank, doing some majestic\n acrobatic moves mid-air, and then perfectly lands inside the bucket after traveling %i inches. Some water\n splashes out of the bucket. %s swim in circles for a bit before\n surfacing up. %s’s concerns and doubts about traveling the world comes back. %s then\n stares deep into the %s’s eyes, wondering whether or not to actually go with %s. All the while %s is completely oblivious to\n all this\n1) Nah\n2) Ya\n3) Hmmmmmmmm…….\n", Name,Jump, Name, Name, Name, Bird, Bird, Hname);     
+scanf("%i", &M2);
+     while (M2 != 1 && M2 != 2 && M2 != 3){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &M2);
+    }
+ } 	
+
+//End 4
+if (M2 == 1){
+    printf("%s decided not to go with the bird. %s is a solo fish and thus does things on its\n own without the help of others. %s feels better that way, and so after some more staring into\n the %s’s eye, %s understood that %s did not want to go anymore and so flew away on its own. %s\n then attempted to find a way into the outside world on its own. Hours went by as %s\n floated in the bucket waiting for %s to come back and notice %s. After a couple of hours %s\n came into the room and grabbed the bucket without looking and poured the water along with %s\n onto a plant. %s never noticed %s’s flopping body and left.\nEnding 4: Fertilizer\n", Name, Name, Name, Bird, Bird, Name, Name, Name, Hname, Name, Hname, Name, Hname, Name);
+    FaceBod();
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+//End 5
+if (M2 == 2){
+    printf("%s decided to go with the %s, since, %s couldn’t think of what to do now that it's\n in the bucket, also %s thought that it would be nice to have some company on the trip\n around the world. The %s picked up the bucket by the handle in its beak and flew off to the\n outside world through an open window, leaving the clueless %s behind. The two traveled the entire world before %s and the %s\n went their separate ways. %s then continued to explore the waterways of the world. As %s laid\n on its deathbed surrounded by the friends it met along the way and by all the memories it has\n made, %s’s heart was full of nothing but happiness and satisfaction.\nEnding 5: Dream Come True\n", Name, Bird, Name, Name, Bird, Hname, Name, Bird, Name, Name, Name);
+    FaceBod();
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+//End 6
+if (M2 == 3){
+    printf("%s wasn’t sure whether or not to go with the bird. %s floated there thinking, and\n thinking, and thinking. Eventually the bird got tired of waiting and flew away, but %s was too\n busy in thought to notice. Eventually %s came into the room looking for the bird and\n accidentally knocked over the bucket %s was in, but %s was too deep in thought to notice. %s\n noticed that %s is now on the table and put %s back into the fish tank. %s lived out the rest\n of its life in thought, deep in thought, it ate, it swam, but it never knew, it was too deep in\n thought, and %s never managed to travel the world.\nEnding 6: Why so Indecisive?????\n", Name, Bird, Name, Bird, Name, Hname, Name, Name, Hname, Name, Name);
+    FaceBod();
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+  //Option 3
+    if (B == 3){
+        printf("%s knew that on its own %s wouldn’t be able to get anywhere soooooooooooo, %s\n decided to do something no fish has ever done before. Try to speak to a human. So when %s’s\n owner: %s came to %s’s tank to feed %s, %s gathered all of it’s will power and came to the\n water surface and attempted to speak, it didn’t work, but the eyes of %s and %s met, and they\n locked on each other. %s and %s then began hearing thoughts that weren’t theirs. The two then\n realized that they were able to communicate directly to each other's souls through eye contact.\n %s was then able to ask %s to release %s so it can see the world. %s refused, saying\n that it’s too dangerous.\n1) Give up\n2) Stay determined\n3) ATTAAAAAAAACK!!!!!!!!!!!!!!!!!!!!!!!\n", Name, Name, Name, Name, Hname, Name, Name, Name, Name, Hname, Name, Name, Name, Hname, Name, Hname);
+        scanf("%i", &M3);
+        while (M3!= 1 && M3 != 2 && M3 != 3){
+    printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &M3);
+            }  
+} 
+
+//End 7
+if (M3 == 1){
+    printf("%s decided that %s is right, it’s much safer here in the fish tank. So %s lived out\n the rest of its life in the fish tank, though %s and %s communicated often and %s learned\n much about the outside world through %s and through the videos they would show %s.\n The years went by and %s is old, laying on the gravel bed, thinking back on its life with %s by\n its side. Though %s still wished that it went out and explored the world it was\n satisfied enough learning about it through %s.", Name, Hname, Name, Name, Hname, Name, Hname, Name, Name, Hname, Name, Hname);
+    printf("\nEnding 7: Human friend\n");
+    FaceBod();
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+
+//End 8
+if (M3 == 2){
+    printf("%s is determined to see the outside world and doesn't want to experience the same\n old days in its comparatively dinky fish tank. After some intense eye staring %s could see how \nmuch %s wanted to travel the world. %s then put %s into the small bucket filled with water.\n %s, could also see in %s's eyes the determination to see the world, so %s packed a small sac of \nfood and allowed %s and %s to go. They all said their tearful goodbyes. %s and %s spent the\n rest of their lives traveling, occasionally coming back to visit %s and telling %s of their\n journeys.\nEnding 8: Better dream come true\n", Name, Hname, Name, Hname, Name, Hname, Bird, Hname, Name, Bird, Name, Bird, Hname, Hname);
+    FaceBod();
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+//M3 Continued
+if (M3 == 3){
+    printf("%s decided to fight %s to show them that %s is capable of defending itself in the\n outside world.\n%s HP: 10,000\n\n%s HP: 50\nMoves:\n1) Slap\n2) Splash\n3) Water gun\n", Name, Hname, Name, Hname, Name);
+	scanf("%i", &E);
+while (E != 1 && E != 2 && E != 3){
+    printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &E);
+            }  
+}
+
+//End 9
+if (E == 1){
+    printf("%s Jumped out of the water and smacked %s in the face with its slimy wet tail. %s\n is barely fazed and loses 0.1 HP. %s then lightly taps %s and %s faints. Unable to prove itself\n %s was never allowed out the tank. %s did eventually get tankmates but was too sad to\n ever interact with it's tankmates. %s dies sad and alone.\nEnding 9: Dream never came true\n", Name, Hname, Hname, Hname, Name, Name, Name, Name, Name);
+    FaceBod();
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+//End 10
+if (E == 2){
+    printf("%s splashes water everywhere by jumping out of the water over and over again. The\n splashes of water don't do any damage to %s but it applies the cold debuff. But the amount of\n water that splashed onto %s was so small, that the cold debuff was negligable. It did however\n anger %s which granted %s a buff of +1000000000000% attack, +1000000000000% agility, and\n invincibility. I think you know how the fight ended for %s. \nEnding 10: Why????", Name, Hname, Hname, Hname, Hname, Name);
+    FaceBod();
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+//End 11
+if (E == 3){
+    printf("%s called upon the power of the heavens and summoned a holy water gun. The water\n gun fires, blasting %s and the roof of the house into the stratosphere. %s won, but is now\n stuck in his tank, that is until %s thought of the idea of blasting itself with the water gun.\n And so %s did, and it flew all the way to the moon, and though %s couldn't experience it\n for very long before %s became not alive. %s did become the first fish on the moon, and\n the first fish to see earth from outer space. A small flop for fish, a giant splash for\n fish-kind.\nEnding 11:Surprisingly OP\n", Name, Hname, Name, Name, Name, Name, Name, Name);
+    FaceBod();
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+//Cheat Sheet
+if (Title == 3){
+printf("Which ending do you want to know how to get?\n1) Ending 1: Flushed\n2) Ending 2: Sad and Alone\n3) Ending 3: Friends \n4) Ending 4: Fertilizer\n5) Ending 5: Dream Come True\n6) Ending 6: Why so Indecisive?????\n7) Ending 7: Human friend\n8) Ending 8: Better dream come true\n9) Ending 9: Dream never came true\n10) Ending 10: Why????\n11) Ending 11:Surprisingly OP?\n");
+scanf("%i", &Cheat);
+while (Cheat != 1 && Cheat != 2 && Cheat != 3 && Cheat != 4 && Cheat != 5 && Cheat != 6 && Cheat!= 7 && Cheat != 8 && Cheat != 9 && Cheat != 10 && Cheat != 11){
+    printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &Cheat);
+            }  
+    }
+
+if (Cheat ==1){
+    printf("Enter: 1 then 1\n"); 
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==2){
+    printf("Enter: 1 then 2\n"); 
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==3){
+    printf("Enter: 1 then 3\n"); 
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==4){
+    printf("Enter: 2 then 1\n"); 
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==5){
+    printf("Enter: 2 then 2\n");
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==6){
+    printf("Enter: 2 then 3\n");
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==7){
+    printf("Enter: 3 then 1\n");
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==8){
+    printf("Enter: 3 then 2\n");
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==9){
+    printf("Enter: 3 then 3 then 1\n");
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==10){
+    printf("Enter: 3 then 3 then 2\n");
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+}
+
+if (Cheat ==11){
+    printf("Enter: 3 then 3 then 3\n");
+    // Return to menu screen
+        printf("1) Return to menu screen\n");
+        scanf("%i", &R);
+    while (R != 1){
+        printf("Oops, that's not an option. Press the number in front of the corresponding option\n");
+    scanf("%i", &R);
+    }
+    }
+}
+//Actual Start
+    story(); 
+
+//Actual Start
+    while (R == 1){
+        story();
+    }
+
